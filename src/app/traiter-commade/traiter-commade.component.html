@@ -13,7 +13,7 @@
       <tbody>
         <tr *ngFor="let commande of commandesList$">
           <th>{{ commande.commandeId }} </th>
-          <td>{{ commande.inProgress}}<br><button class="btn btn-primary " type="button" (click)="onGetCommandeProductsByCommande(commande)">Voir la commande</button></td>
+          <td>{{ commande.inProgress}}<br><button class="btn btn-primary " type="button" (click)="onGetCommandeProductDtosByCommande(commande)">Voir la commande</button></td>
           <td>{{ commande.isReady }}<br><button class="btn btn-primary " type="button">Changer Etat</button></td> 
           <td>{{ commande.isDelivered }}<br><button class="btn btn-primary " type="button">Changer Etat</button></td>
                    

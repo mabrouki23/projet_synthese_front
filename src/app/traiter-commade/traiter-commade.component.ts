@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { CommandeService } from '../commande.service';
 import { Commande } from '../models/commande.model';
 import { Product } from '../models/product.model';
+import { ProductDto } from '../models/roductDto.model';
 
 @Component({
   selector: 'app-traiter-commade',
@@ -10,7 +11,7 @@ import { Product } from '../models/product.model';
   styleUrls: ['./traiter-commade.component.css']
 })
 export class TraiterCommadeComponent implements OnInit {
-  products!:Product[];
+  products!:ProductDto[];
   commandesList$: any;
  
   constructor(private commandeService:CommandeService, private _router: Router,) { }
@@ -31,11 +32,11 @@ getAllCommandes(){
     }
   })
 }
-onGetCommandeProductsByCommande(commande:Commande){
-this.commandeService.getProductsByCommande(commande.commandeId).subscribe(
+onGetCommandeProductDtosByCommande(commande:Commande){
+this.commandeService.getProductDtosByCommande(commande.commandeId).subscribe(
 data=>{
   this.products=data;
-  this._router.navigate(['commandeProducts',commande.commandeId,'products'],{state:this.products})
+  this._router.navigate(['commandeProducts',commande.commandeId,'productDtos'],{state:this.products})
 }
 )
 }

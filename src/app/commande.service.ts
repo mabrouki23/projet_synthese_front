@@ -7,6 +7,7 @@ import { Commande } from './models/commande.model';
 import { CommandeProduct } from './models/commandeProduct.model';
 import { CommProd } from './models/commProd.model';
 import { Product } from './models/product.model';
+import { ProductDto } from './models/roductDto.model';
 
 @Injectable({
   providedIn: 'root'
@@ -73,6 +74,11 @@ getAllcommandes():Observable<any>{
 getProductsByCommande(commandeId:number):Observable<Product[]>{
   console.log(commandeId)
 return this.httpClient.get<Product[]>("http://localhost:8080/api/commandeProducts/"+commandeId+"/products")
+}
+
+getProductDtosByCommande(commandeId:number):Observable<ProductDto[]>{
+  console.log(commandeId)
+return this.httpClient.get<ProductDto[]>("http://localhost:8080/api/commandeProducts/"+commandeId+"/productDtos")
 }
 
 }
