@@ -1,0 +1,18 @@
+
+  <h1 mat-dialog-title>Hi </h1>
+  <div mat-dialog-content>
+    <p>En voulez-vous combien?</p>
+    <div class="wrapper">
+      <button class="plusminus" (click)="handleMinus()">-</button>
+      <input type="number" class="num" value="0" [(ngModel)]="value" />
+      <button class="plusminus" (click)="handlePlus()">+</button>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <mat-divider></mat-divider>     
+    <button class="mat-raised-button mat-primary" (click)="confirm()">Ajouter</button>    
+    <div mat-dialog-actions >       
+ 
+  </div>  
+   
+    
