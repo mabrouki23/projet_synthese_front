@@ -16,6 +16,8 @@ import { DialogOtherCategroyComponent } from './dialog-other-categroy/dialog-oth
 import { CommandeClientComponent } from './commande-client/commande-client.component';
 import { TraiterCommadeComponent } from './traiter-commade/traiter-commade.component';
 import { AfficherCommandesComponent } from './afficher-commandes/afficher-commandes.component';
+import { AddProductComponent } from './add-product/add-product.component';
+import { ListProductsComponent } from './list-products/list-products.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,7 @@ import { AfficherCommandesComponent } from './afficher-commandes/afficher-comman
     HomeComponent,
     CategoryComponent,
     ProductComponent,  
-    PopUpComponent, DialogOtherCategroyComponent, CommandeClientComponent, TraiterCommadeComponent, AfficherCommandesComponent
+    PopUpComponent, DialogOtherCategroyComponent, CommandeClientComponent, TraiterCommadeComponent, AfficherCommandesComponent, AddProductComponent, ListProductsComponent
   ],
   
   imports: [

@@ -25,6 +25,7 @@
     "bulma": "^0.9.3",
     "jquery": "^3.6.0",
     "m": "^1.7.0",
+    "ng-circle-progress": "^1.6.0",
     "ng-material": "0.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

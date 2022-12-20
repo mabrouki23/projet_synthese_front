@@ -1,11 +1,9 @@
-<mat-list-item *ngFor="let productDto of products ,let i=index" >
-       
+<mat-list-item *ngFor="let productDto of products ,let i=index" >       
     <mat-card appMaterialElevation  >
         <mat-card-header>
             <mat-card-title> {{ productDto.productName }}</mat-card-title>
         </mat-card-header>
-        <img mat-card-image class="imgs"  src="data:image/jpeg;base64,{{productDto.data}}">
-     
+        <img mat-card-image class="imgs"  src="data:image/jpeg;base64,{{productDto.data}}">     
         <mat-card-content>
             <p>
                 {{ productDto.productName }}  

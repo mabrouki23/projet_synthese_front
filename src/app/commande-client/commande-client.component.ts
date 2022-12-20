@@ -24,6 +24,7 @@ export class CommandeClientComponent implements OnInit {
   cpt: number = 0;
   qte1!: number;
   qte2!: number;
+  showSpinner = false;
 
   constructor(private _router: Router, private _activtedRoute: ActivatedRoute, private commandeService: CommandeService, private formBuilder: FormBuilder) {
     this.panierForm = this.formBuilder.group({
@@ -111,14 +112,14 @@ console.log(data)
     }
     this.commandeService.saveCommande(body).subscribe({
       next: data => {
-
+        this.showSpinner = true;
       },
       error: error => {
 
         console.error('There was an error!', error);
       }
     })
-    this._router.navigate(['home'])
+   this._router.navigate(['home'])
   }
   onModifierCommandeProduct(i: number) {
     this.selectedCommandeProduct = this.commandePoducts[i];
@@ -143,4 +144,5 @@ console.log(data)
 
   }
 
+  
 }
